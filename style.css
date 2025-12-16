@@ -1,0 +1,639 @@
+
+
+
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= VARIABLES ================= */
+:root {
+    --primary-gold: #d4af37;
+    --secondary-gold: #aa8c2c;
+    --dark-bg: #121212;
+    --card-bg: #1e1e1e;
+    --text-main: #f0f0f0;
+    --text-muted: #b0b0b0;
+    --glow-color: rgba(212, 175, 55, 0.6);
+    --border-glow: 0 0 15px var(--glow-color);
+    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* ================= GLOBAL ================= */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI','Times New Roman', Geneva, Verdana, sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-main);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-gold);
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #fdfdfd;
+    text-shadow: 0 0 10px var(--primary-gold);
+}
+
+/* ================= TYPOGRAPHY & ANIMATIONS ================= */
+h1, h2, h3 {
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+h2 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 60px;
+    background: linear-gradient(to right, #fff, var(--primary-gold), #e9dfdf);
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+    animation: shine 5s linear infinite;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+@keyframes shine {
+    to { background-position: 200% center; }
+}
+
+/* Entrance Animations */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= HERO SECTION ================= */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, #2a1810 0%, #000000 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=');
+    opacity: 0.3;
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 2;
+    padding: 20px;
+}
+
+/* ================= شعار رئيسي مع تأثيرات وتحريك لطيف ================= */
+.logo-container{
+    max-width: 160px;  /* الحجم الأقصى */
+    margin-bottom: 30px;
+    filter: drop-shadow(0 0 20px rgba(216, 213, 22, 0.808)); /* ظل خفيف */
+    animation: fadeUp 3s ease-out, gentlePulse 5s infinite ease-in-out; /* دمج الحركة الأصلية مع التكبير والتقلص */
+    transform-origin: center; /* تأكد أن التكبير يحدث من مركز الصورة */
+}
+
+/* الحركة الخفيفة للتكبير والتقلص */
+@keyframes gentlePulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2); /* تكبير 5% */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    animation: fadeUp 1s ease-out 0.2s forwards;
+    opacity: 0;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    margin-bottom: 50px;
+    animation: fadeUp 1s ease-out 0.4s forwards;
+    opacity: 0;
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+    display: inline-block;
+    padding: 16px 50px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: 2px solid var(--primary-gold);
+}
+
+.btn-primary {
+    background: transparent;
+    color: var(--primary-gold);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--primary-gold);
+    transition: 0.4s ease;
+    z-index: -1;
+}
+
+.btn-primary:hover {
+    color: #000;
+    box-shadow: 0 0 30px var(--glow-color);
+}
+
+.btn-primary:hover::before {
+    width: 100%;
+}
+
+.btn-registration {
+    background: var(--primary-gold);
+    color: #000;
+    border: none;
+}
+
+.btn-registration:hover {
+    background: #f01313bd;
+    box-shadow: 0 0 30px rgba(255,255,255,0.5);
+    transform: translateY(-5px);
+}
+
+/* ================= SECTIONS ================= */
+section {
+    padding: 120px 0;
+    position: relative;
+}
+
+/* ================= WELCOME ================= */
+.welcome {
+    background: var(--card-bg);
+    border-bottom: 1px solid #333;
+}
+
+.welcome p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    line-height: 2;
+}
+
+/* ================= SPECIALTIES (CARDS) ================= */
+.specialties {
+    background: #0a0a0a;
+}
+
+.specialties-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 40px;
+    perspective: 1000px;
+}
+
+.specialty-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    /* Initial state for animation */
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUp 0.8s ease-out forwards;
+}
+
+.specialty-card .specialty-info {
+    display: flex;
+    flex-direction: column; /* ترتيب العناصر عمودياً */
+    align-items: left;    /* وضع العناصر أفقياً في الوسط */
+    text-align: center;     /* محاذاة النص في الوسط */
+    gap: 10px;              /* مسافة بين العناصر */
+}
+
+.specialty-card .btn-details {
+    margin-top: 10px;       /* مسافة فوق الزر */
+    align-self: center;     /* تأكيد وضع الزر في الوسط */
+}
+
+
+/* Staggered Animation Delays */
+.specialty-card:nth-child(1) { animation-delay: 0.1s; }
+.specialty-card:nth-child(2) { animation-delay: 0.2s; }
+.specialty-card:nth-child(3) { animation-delay: 0.3s; }
+.specialty-card:nth-child(4) { animation-delay: 0.4s; }
+.specialty-card:nth-child(5) { animation-delay: 0.5s; }
+.specialty-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* GLOWING FRAME EFFECT */
+.specialty-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    padding: 2px;
+    background: linear-gradient(45deg, transparent, var(--primary-gold), transparent);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0.5;
+    transition: var(--transition);
+}
+
+.specialty-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 30px rgba(212, 175, 55, 0.2);
+    border-color: var(--primary-gold);
+}
+
+.specialty-card:hover::before {
+    opacity: 1;
+    background: var(--primary-gold);
+    box-shadow: 0 0 0px var(--primary-gold);
+}
+
+.specialty-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    filter: grayscale(30%);
+    transition: var(--transition);
+}
+
+.specialty-card:hover .specialty-image {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+.specialty-info {
+    padding: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.specialty-info h3 {
+    color: var(--primary-gold);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.specialty-info p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+
+/* ================= الصور داخل القصاصة ================= */
+.modal-body img {
+    display: block;          /* يجعل الصورة كتلة لتجنب التداخل مع عناصر أخرى */
+    max-width: 100%;         /* عرض الصورة لا يتجاوز عرض نافذة الـ modal */
+    height: auto;            /* الارتفاع يتغير تلقائيًا للحفاظ على نسبة العرض إلى الارتفاع */
+    max-height: 50vh;        /* الحد الأقصى للارتفاع 50% من ارتفاع الشاشة */
+    margin: 0 auto 20px;     /* توسيط الصورة أفقياً وإضافة مسافة أسفلها */
+    object-fit: contain;     /* الحفاظ على نسبة الصورة دون قصها */
+    border-radius: 10px;     /* حواف دائرية خفيفة لإطلالة أنيقة */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* ظل خفيف لإبراز الصورة */
+    transition: transform 0.3s ease; /* تأثير انسيابي عند تكبير أو تصغير */
+}
+
+/* تأثير عند تمرير الماوس على الصورة داخل modal */
+.modal-body img:hover {
+    transform: scale(1.05);  /* تكبير الصورة قليلاً عند المرور عليها */
+}
+
+
+
+
+.btn-details {
+    margin-top: 20px;
+    background: transparent;
+    border: 1px solid var(--primary-gold);
+    color: var(--primary-gold);
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.btn-details:hover {
+    background: var(--primary-gold);
+    color: #f5f5f5;
+    box-shadow: 0 0 15px var(--glow-color);
+}
+
+/* ================= WHY US ================= */
+.why-us {
+    background: var(--card-bg);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.feature {
+    background: #151515;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: var(--transition);
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-gold);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.feature-icon {
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+    display: inline-block;
+    text-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+.feature h3 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+/* ================= GALLERY ================= */
+.gallery {
+    background: #0a0a0a;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: var(--transition);
+    filter: brightness(0.8);
+    border: 1px solid transparent;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+    border-color: var(--primary-gold);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    z-index: 2;
+}
+
+/* ================= REGISTRATION ================= */
+.registration {
+    background: linear-gradient(45deg, #1a1008, #3d2817);
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.registration h2 {
+    color: var(--primary-gold);
+}
+
+.registration p {
+    color: #fafafa;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background: #000;
+    padding: 50px 0;
+    text-align: center;
+    border-top: 2px solid var(--primary-gold);
+}
+
+.footer p {
+    color: #666;
+}
+
+/* ================= MODAL ================= */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: var(--card-bg);
+    margin: 5% auto;
+    padding: 20px; /* أضفنا حشو داخلي مناسب */
+    border: 1px solid var(--primary-gold);
+    width: 80%;
+    max-width: 800px;
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgba(212, 175, 55, 0.2);
+    animation: modalZoom 0.3s ease-out;
+
+    /* التعديلات الجديدة */
+    max-height: 90vh; /* لا تتجاوز 90% من ارتفاع الشاشة */
+    overflow-y: auto; /* شريط تمرير إذا كان النص كبير */
+    box-sizing: border-box; /* ليشمل الحشو ضمن الأبعاد */
+}
+
+
+@keyframes modalZoom {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.close-button {
+    color: var(--primary-gold);
+    float: left;
+    font-size: 35px;
+    font-weight: bold;
+    margin: 15px 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-button:hover {
+    color: #fff;
+    text-shadow: 0 0 10px var(--primary-gold);
+}
+
+.modal-body {
+    padding: 40px;
+    color: var(--text-main);
+}
+
+#modal-title {
+    color: var(--primary-gold);
+    font-size: 2rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+}
+
+#modal-details h4 {
+    color: #fff;
+    margin-top: 5px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .hero-title { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    .btn { padding: 12px 35px; font-size: 1rem; }
+}
+
+
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.footer-icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 8px;
+    background: rgba(212, 175, 55, 0.1);
+    transition: all 0.3s ease;
+}
+
+.footer-icon:hover {
+    transform: scale(1.1);
+    background: rgba(212, 175, 55, 0.2);
+    color: #fff;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+
+/* ===============================
+   1. إعدادات عامة
+================================ */
+:root {
+    --primary-gold: #ffd700;
+    --glow-color: rgba(255, 215, 0, 0.7);
+}
+
+/* ===============================
+   2. تصميم البطاقة
+================================ */
+.card {
+    position: relative;
+    padding-bottom: 70px;
+}
+
+/* ===============================
+   3. تصميم الأزرار
+================================ */
+.btn {
+    margin-top: 20px;
+    background: transparent;
+    border: 1px solid var(--primary-gold);
+    color: var(--primary-gold);
+    padding: 10px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary {
+    background: var(--primary-gold);
+    color: #000;
+    box-shadow: 0 0 15px var(--glow-color);
+    animation: pulse 2s infinite;
+}
+
+.btn-secondary:hover {
+        background: #df0e0eaf;
+    box-shadow: 0 0 30px rgba(255,255,255,0.5);
+    transform: translateY(-5px);
+}
+
+/* ===============================
+   5. موضع الزر داخل البطاقة
+================================ */
+.card .btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+
