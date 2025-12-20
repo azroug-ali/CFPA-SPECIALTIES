@@ -2,208 +2,207 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- عنوان يظهر في Google والمتصفح -->
-    <title>  مركز التكوين المهني والتمهين بلعجين أحمد - حاسي ماماش </title>
-
-    <!-- وصف الموقع (مهم جدًا لمحركات البحث) -->
-    <meta name="description" content="يعرض هذا الموقع التخصصات الموجودة في مركز التكوين المهني و التمهين بلعجين أهمد حاسي ماماش ">
-
+    <title>مركز التكوين المهني والتمهين بلعجين أحمد - حاسي ماماش</title>
+    <meta name="description" content="يعرض هذا الموقع التخصصات الموجودة في مركز التكوين المهني و التمهين بلعجين أهمد حاسي ماماش">
     <meta name="google-site-verification" content="2td_DdJtTz2oK-QHR4Wxac5aUkwNRzCsJSb-kORNTLs" />
-
-    <!-- كلمات مفتاحية (مفيدة ولكن غير إجبارية) -->
-    <meta name="keywords" content="
-    CFPA,
-    حاسي ماماش,
-    مركز التكوين المهني,
-    التمهين,
-    التكوين والتمهين
-    ">
-
-    <!-- ملف التنسيق -->
+    <meta name="keywords" content="CFPA, حاسي ماماش, مركز التكوين المهني, التمهين, التكوين والتمهين">
     <link rel="stylesheet" href="style.css">
-
-    <!-- أيقونة الموقع -->
     <link rel="icon" type="image/png" href="Photos/Logo Ali Informatique.png">
-
-</head>
-
-    <!-- ===== خط عربي جميل و شاشة الترحيب ===== -->
     <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://www.fontstatic.com/f=old-antic-decorative">
 
+    <!-- كل الأنماط هنا في head -->
     <style>
-    /* ===== Intro Screen ===== */
-    #intro {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: radial-gradient(circle, #000 0%, #1a1a1a 100%);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        z-index: 9999;
-        color: #FFD700;
-        text-align: center;
-        overflow: hidden;
-    }
-
-    #intro h1 {
-        font-family: 'Amiri', serif;
-        font-size: 3rem;
-        letter-spacing: 2px;
-        opacity: 0;
-        animation: fadeInText 2s forwards;
-    }
-
-    #intro .fireworks {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-    }
-
-    .spark {
-        position: absolute;
-        width: 6px;
-        height: 6px;
-        background: #FFD700;
-        border-radius: 50%;
-        opacity: 0;
-        animation: explode 1s ease-out forwards;
-    }
-
-    @keyframes fadeInText {
-        0% { opacity: 0; transform: scale(0.5); }
-        50% { opacity: 1; transform: scale(1.1); }
-        100% { opacity: 1; transform: scale(1); }
-    }
-
-    @keyframes explode {
-        0% { transform: translate(0,0); opacity: 1; }
-        100% { transform: translate(var(--x), var(--y)) scale(0.5); opacity: 0; }
-    }
-
-    /* المحتوى الرئيسي مخفي مؤقتاً */
-    #main-content {
-        opacity: 0;
-        transition: opacity 1s ease-in;
-    }
-    </style>
-
-</head>
-<body>
-
-   
-<!-- رابط الخط -->
-    <link rel="stylesheet" type="text/css" href="https://www.fontstatic.com/f=old-antic-decorative" />
-
-    <style>
+        /* ===== Intro Screen ===== */
         #intro {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, #000 0%, #1a1a1a 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 9999;
+            color: #FFD700;
+            text-align: center;
+            overflow: hidden;
             font-family: "old-antic-decorative", serif;
         }
+
+        #intro h1 {
+            font-family: 'Amiri', serif;
+            font-size: 3rem;
+            letter-spacing: 2px;
+            opacity: 0;
+            animation: fadeInText 2s forwards;
+            position: relative;
+            font-size: 2.5rem;
+            font-weight: bold;
+            line-height: 1.4;
+            background: linear-gradient(45deg, #FFD700, #FFA500, #FFFACD, #FFD700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 3s linear infinite, bounce 1.5s ease forwards;
+            text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 20px #FFA500;
+        }
+
+        .spark {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: #FFD700;
+            border-radius: 50%;
+            opacity: 0;
+            animation: explode 1s ease-out forwards;
+        }
+
+        .fireworks {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        @keyframes fadeInText {
+            0% { opacity: 0; transform: scale(0.5); }
+            50% { opacity: 1; transform: scale(1.1); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes explode {
+            0% { transform: translate(0,0); opacity: 1; }
+            100% { transform: translate(var(--x), var(--y)) scale(0.5); opacity: 0; }
+        }
+
+        @keyframes bounce {
+            0% { opacity: 0; transform: translateY(20px) scale(0.9); }
+            50% { opacity: 1; transform: translateY(-10px) scale(1.05); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        @keyframes shine {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .glow-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,215,0,0.8), rgba(255,215,0,0));
+            width: 20px;
+            height: 20px;
+            opacity: 0.6;
+            animation: float 10s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) translateX(0) scale(1); }
+            50% { transform: translateY(-150px) translateX(100px) scale(1.2); }
+            100% { transform: translateY(0) translateX(0) scale(1); }
+        }
+
+        #main-content {
+            opacity: 0;
+            transition: opacity 1s ease-in;
+        }
+
+        /* أنماط الفوتر من الكود الأصلي */
+        .footer { 
+            background: #000; 
+            padding: 40px 20px 30px 20px; 
+            text-align: center; 
+            border-top: 2px solid #d4af37; 
+            color: #fff; 
+            position: relative; 
+        }
+        
+        .footer p { 
+            margin-bottom: 20px; 
+            font-size: 1rem; 
+            color: #ccc; 
+        }
+        
+        .footer-icons { 
+            display: flex; 
+            justify-content: center; 
+            gap: 25px; 
+            flex-wrap: wrap; 
+            margin-top: 10px; 
+        }
+        
+        .footer-icon { 
+            display: flex; 
+            align-items: center; 
+            gap: 8px; 
+            color: #d4af37; 
+            text-decoration: none; 
+            font-weight: 600; 
+            padding: 8px 15px; 
+            border-radius: 8px; 
+            background: rgba(212, 175, 55, 0.1); 
+            transition: all 0.3s ease; 
+        }
+        
+        .footer-icon:hover { 
+            transform: scale(1.1); 
+            background: rgba(212, 175, 55, 0.2); 
+            color: #fff; 
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.5); 
+        }
+        
+        .footer-cnas {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+            background: linear-gradient(90deg, #FFD700, #FFA500, #FFFACD, #FFD700, #FF8C00);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: colorShift 5s ease-in-out infinite, subtleShadow 3s ease-in-out infinite;
+            letter-spacing: 1px;
+        }
+        
+        .footer-dev {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+            background: linear-gradient(90deg, #FFD700, #FFA500, #FFFACD, #FFD700, #FF8C00);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: colorShift 5s ease-in-out infinite, subtleShadow 3s ease-in-out infinite;
+            letter-spacing: 1px;
+        }
+        
+        @keyframes colorShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        @keyframes subtleShadow {
+            0%, 100% { text-shadow: 0 0 3px #FFD700, 0 0 8px #FFA500; }
+            50% { text-shadow: 0 0 5px #FFFACD, 0 0 12px #FF8C00; }
+        }
     </style>
 </head>
+
 <body>
+    <!-- شاشة الترحيب -->
+    <div id="intro">
+        <h1>دورة فُـيــفُري 2026 ترحب بمتربصيها الشغوفين</h1>
+        <div id="fireworks" class="fireworks"></div>
+    </div>
 
-<div id="intro">
-    <h1>دورة فُـيــفُري 2026 ترحب بمتربصيها الشغوفين</h1>
-</div>
-
-
-<style>
-    /* إعدادات شاشة الترحيب */
-    #intro {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: radial-gradient(circle at center, #0a0a0a, #000000);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        overflow: hidden;
-    }
-
-    #intro h1 {
-        position: relative;
-        font-size: 2.5rem;
-        font-weight: bold;
-        line-height: 1.4;
-        background: linear-gradient(45deg, #FFD700, #FFA500, #FFFACD, #FFD700);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: shine 3s linear infinite, bounce 1.5s ease forwards;
-        text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 20px #FFA500;
-        opacity: 0;
-        z-index: 2;
-    }
-
-    /* ظهور النص تدريجياً */
-    @keyframes bounce {
-        0% { opacity: 0; transform: translateY(20px) scale(0.9); }
-        50% { opacity: 1; transform: translateY(-10px) scale(1.05); }
-        100% { opacity: 1; transform: translateY(0) scale(1); }
-    }
-
-    /* لمعان النص */
-    @keyframes shine {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-    }
-
-    /* دوائر مضيئة خلف النص */
-    .glow-circle {
-        position: absolute;
-        border-radius: 50%;
-        background: radial-gradient(circle, rgba(255,215,0,0.8), rgba(255,215,0,0));
-        width: 20px;
-        height: 20px;
-        opacity: 0.6;
-        animation: float 10s linear infinite;
-        pointer-events: none;
-    }
-
-    @keyframes float {
-        0% { transform: translateY(0) translateX(0) scale(1); }
-        50% { transform: translateY(-150px) translateX(100px) scale(1.2); }
-        100% { transform: translateY(0) translateX(0) scale(1); }
-    }
-</style>
-
-<script>
-    // ظهور النص تدريجي
-    window.addEventListener('DOMContentLoaded', () => {
-        const h1 = document.querySelector('#intro h1');
-        setTimeout(() => {
-            h1.style.opacity = 1;
-        }, 200);
-
-        // إنشاء دوائر مضيئة عشوائية
-        const intro = document.getElementById('intro');
-        for(let i=0; i<15; i++){
-            const circle = document.createElement('div');
-            circle.classList.add('glow-circle');
-            circle.style.width = `${10+Math.random()*30}px`;
-            circle.style.height = circle.style.width;
-            circle.style.top = `${Math.random()*100}%`;
-            circle.style.left = `${Math.random()*100}%`;
-            circle.style.animationDuration = `${5 + Math.random()*10}s`;
-            intro.appendChild(circle);
-        }
-    });
-</script>
-
-    <!-- تغليف المحتوى الحالي -->
+    <!-- المحتوى الرئيسي -->
     <div id="main-content">
-
+        <!-- محتوى الموقع الأصلي بالكامل -->
         <section class="hero" id="hero">
             <div class="hero-content">
                 <img src="Photos/CFPA HASSI MAMACH.png" alt="" class="logo-container">
@@ -235,12 +234,7 @@
                             <p>نوع الشهادة : شهادة تكوين مهني متخصص CFPS </p>
                             <p>مدة التكوين : 12 شهرا (عام كامل ) </p>
                             <button class="btn-details">تفاصيل أكثر</button>
-
-                           <a href="https://www.takwin.dz/inscription/254145/35/27/1/1" class="btn btn-secondary" target="_blank">
-  سجل الان في التخصص
-</a>
-
-
+                           <a href="https://www.takwin.dz/inscription/254145/35/27/1/1" class="btn btn-secondary" target="_blank">سجل الان في التخصص</a>
                         </div>
                     </div>
 
@@ -254,10 +248,7 @@
                             <p>نوع الشهادة : شهادة كفاءة مهنية  CAP </p>
                             <p>مدة التكوين : 12 شهرا (عام كامل ) </p>
                             <button class="btn-details">تفاصيل أكثر</button>
-                            <a href="https://www.takwin.dz/inscription/254124/35/27/1/1" class="btn btn-secondary" target="_blank">
-  سجل الان في التخصص
-</a>
-
+                            <a href="https://www.takwin.dz/inscription/254124/35/27/1/1" class="btn btn-secondary" target="_blank">سجل الان في التخصص</a>
                         </div>
                     </div>
 
@@ -271,9 +262,7 @@
                             <p>نوع الشهادة : شهادة كفاءة مهنية  CAP </p>
                             <p>مدة التكوين : 12 شهرا (عام كامل ) </p>
                             <button class="btn-details">تفاصيل أكثر</button>
-                            <a href="https://www.takwin.dz/inscription/254160/35/27/3/3" class="btn btn-secondary" target="_blank">
-  سجل الان في التخصص
-</a>
+                            <a href="https://www.takwin.dz/inscription/254160/35/27/3/3" class="btn btn-secondary" target="_blank">سجل الان في التخصص</a>
                         </div>
                     </div>
 
@@ -287,9 +276,7 @@
                             <p>نوع الشهادة : شهادة تكوين مهني متخصص CFPS </p>
                             <p>مدة التكوين : 12 شهرا (عام كامل ) </p>
                             <button class="btn-details">تفاصيل أكثر</button>
-                            <a href="https://www.takwin.dz/inscription/254183/35/27/3/3" class="btn btn-secondary" target="_blank">
-  سجل الان في التخصص
-</a>
+                            <a href="https://www.takwin.dz/inscription/254183/35/27/3/3" class="btn btn-secondary" target="_blank">سجل الان في التخصص</a>
                         </div>
                     </div>
 
@@ -303,9 +290,7 @@
                             <p>نوع الشهادة : شهادة كفاءة مهنية  CAP </p>
                             <p>مدة التكوين : 12 شهرا (عام كامل ) </p>
                             <button class="btn-details">تفاصيل أكثر</button>
-                            <a href="https://www.takwin.dz/inscription/254191/35/27/3/3" class="btn btn-secondary" target="_blank">
-  سجل الان في التخصص
-</a>
+                            <a href="https://www.takwin.dz/inscription/254191/35/27/3/3" class="btn btn-secondary" target="_blank">سجل الان في التخصص</a>
                         </div>
                     </div>
 
@@ -319,9 +304,7 @@
                             <p>نوع الشهادة : شهادة كفاءة مهنية  CAP </p>
                             <p>مدة التكوين : 12 شهرا (عام كامل ) </p>
                             <button class="btn-details">تفاصيل أكثر</button>
-                            <a href="https://www.takwin.dz/inscription/254200/35/27/3/3" class="btn btn-secondary" target="_blank">
-  سجل الان في التخصص
-</a>
+                            <a href="https://www.takwin.dz/inscription/254200/35/27/3/3" class="btn btn-secondary" target="_blank">سجل الان في التخصص</a>
                         </div>
                     </div>
 
@@ -335,9 +318,7 @@
                             <p>نوع الشهادة : شهادة  تحكم مهني CMP </p>
                             <p>مدة التكوين : 18 شهرا (عام و نصف ) </p>
                             <button class="btn-details">تفاصيل أكثر</button>
-                            <a href="https://www.takwin.dz/inscription/254209/35/27/3/3" class="btn btn-secondary" target="_blank">
-  سجل الان في التخصص
-</a>
+                            <a href="https://www.takwin.dz/inscription/254209/35/27/3/3" class="btn btn-secondary" target="_blank">سجل الان في التخصص</a>
                         </div>
                     </div>
 
@@ -351,9 +332,7 @@
                             <p>نوع الشهادة : شهادة كفاءة مهنية  CAP </p>
                             <p>مدة التكوين : 12 شهرا (عام كامل ) </p>
                             <button class="btn-details">تفاصيل أكثر</button>
-                            <a href="https://www.takwin.dz/inscription/254215/35/27/3/3" class="btn btn-secondary" target="_blank">
-  سجل الان في التخصص
-</a>
+                            <a href="https://www.takwin.dz/inscription/254215/35/27/3/3" class="btn btn-secondary" target="_blank">سجل الان في التخصص</a>
                         </div>
                     </div>
 
@@ -367,9 +346,7 @@
                             <p>نوع الشهادة : شهادة تأهيل مهني CQP </p>
                             <p>مدة التكوين : 3 أشهر </p>
                             <button class="btn-details">تفاصيل أكثر</button>
-                            <a href="https://www.takwin.dz/inscription/254272/35/27/3/3" class="btn btn-secondary" target="_blank">
-  سجل الان في التخصص
-</a>
+                            <a href="https://www.takwin.dz/inscription/254272/35/27/3/3" class="btn btn-secondary" target="_blank">سجل الان في التخصص</a>
                         </div>
                     </div>
 
@@ -383,9 +360,7 @@
                             <p>نوع الشهادة : شهادة تأهيل مهني CQP </p>
                             <p>مدة التكوين : 3 أشهر </p>
                             <button class="btn-details">تفاصيل أكثر</button>
-                            <a href="https://www.takwin.dz/inscription/254234/35/27/3/3" class="btn btn-secondary" target="_blank">
-  سجل الان في التخصص
-</a>
+                            <a href="https://www.takwin.dz/inscription/254234/35/27/3/3" class="btn btn-secondary" target="_blank">سجل الان في التخصص</a>
                         </div>
                     </div>
 
@@ -399,9 +374,7 @@
                             <p>نوع الشهادة : شهادة تأهيل مهني CQP </p>
                             <p>مدة التكوين : 3 أشهر </p>
                             <button class="btn-details">تفاصيل أكثر</button>
-                            <a href="https://www.takwin.dz/inscription/254241/35/27/3/3" class="btn btn-secondary" target="_blank">
-  سجل الان في التخصص
-</a>
+                            <a href="https://www.takwin.dz/inscription/254241/35/27/3/3" class="btn btn-secondary" target="_blank">سجل الان في التخصص</a>
                         </div>
                     </div>
 
@@ -415,27 +388,25 @@
                             <p>نوع الشهادة : شهادة تأهيل مهني CQP </p>
                             <p>مدة التكوين : 3 أشهر </p>
                             <button class="btn-details">تفاصيل أكثر</button>
-                            <a href="https://www.takwin.dz/inscription/254252/35/27/2/1" class="btn btn-secondary" target="_blank">
-  سجل الان في التخصص
-</a>
+                            <a href="https://www.takwin.dz/inscription/254252/35/27/2/1" class="btn btn-secondary" target="_blank">سجل الان في التخصص</a>
                         </div>
                     </div>
 
-                        <!-- تخصص 13 -->
-                         <div class="specialty-card" data-id="13">
-                            <div class="card-bg" style="background-color: #ffffff;"></div>
-                            <img src="Photos/إنتاج النباتات.jpg" alt="تخصص 13" class="specialty-image">
-                            <div class="specialty-info">
-                                <h3>إنتاج النباتات</h3>
-                                <p class="description">المستوى الدراسي المطلوب : طور محو الأمية منهي المستوى التعليمي محدود</p>
-                                <p>نوع الشهادة : شهادة تأهيل مهني CQP </p>
-                                <p>مدة التكوين : 3 أشهر </p>
+                    <!-- تخصص 13 -->
+                    <div class="specialty-card" data-id="13">
+                        <div class="card-bg" style="background-color: #ffffff;"></div>
+                        <img src="Photos/إنتاج النباتات.jpg" alt="تخصص 13" class="specialty-image">
+                        <div class="specialty-info">
+                            <h3>إنتاج النباتات</h3>
+                            <p class="description">المستوى الدراسي المطلوب : طور محو الأمية منهي المستوى التعليمي محدود</p>
+                            <p>نوع الشهادة : شهادة تأهيل مهني CQP </p>
+                            <p>مدة التكوين : 3 أشهر </p>
                             <button class="btn-details">تفاصيل أكثر</button>
-                            <a href="https://www.takwin.dz/inscription/254261/35/27/1/1" class="btn btn-secondary" target="_blank">
-  سجل الان في التخصص
-</a>
-                            </div>
-                     </div>
+                            <a href="https://www.takwin.dz/inscription/254261/35/27/1/1" class="btn btn-secondary" target="_blank">سجل الان في التخصص</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Modal for Specialty Details -->
@@ -513,129 +484,61 @@
         </section>
 
         <div class="footer-icons">
+            <a href="tel:+213045 43 07 69" class="footer-icon" title="إتصل بنا">📞 69 07 43 045</a>
+            <a href="fax:+213045 43 07 68" class="footer-icon" title="الفاكس">📠 68 07 43 045</a>
+            <a href="mailto:cfpahassimameche27@gmail.com" class="footer-icon" title="إرسال بريد إلكتروني">📧 تواصل معنا عبر البريد الالكتروني</a>
+            <a href="https://www.facebook.com/alsfht.alrsmyt.lmrkz.altkwyn.almhny.w.al" target="_blank" class="footer-icon" title="تواصل معنا">🌐 صفحتنا عبر الفايسبوك</a>
+        </div>
 
-    <a href="tel:+213045 43 07 69" class="footer-icon" title="إتصل بنا ">
-        📞 69 07 43 045
-    </a>
-
-    <a href="fax:+213045 43 07 68" class="footer-icon" title="الفاكس">
-        📠 68 07 43 045
-    </a>
-
-    <!-- الإيميل -->
-    <a href="mailto:cfpahassimameche27@gmail.com" 
-       class="footer-icon" title="إرسال بريد إلكتروني">
-        📧 تواصل معنا عبر البريد الالكتروني 
-    </a>
-
-    <a href="https://www.facebook.com/alsfht.alrsmyt.lmrkz.altkwyn.almhny.w.al" 
-       target="_blank" class="footer-icon" title="تواصل معنا">
-        🌐 صفحتنا عبر الفايسبوك
-    </a>
-
-</div>
-
-<div class="footer">
-    <p class="footer-cnas">&copy; مركز التكوين المهني و التمهين يرحب بكم </p>
-    <p class="footer-dev">تم تطوير هذا الموقع من طرف المتربص عزروق علي بلقندوز</p>
-</div>
-
-<style>
-/* ===================== الفوتر ===================== */
-.footer {
-    text-align: center;
-    padding: 20px 10px;
-    background-color: #111; /* خلفية داكنة لتمييز الألوان */
-    color: white;
-    font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: relative;
-    z-index: 10;
-}
-
-/* نص رئيسي ذهبي متدرج وحركة ألوان */
-.footer-cnas {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 8px;
-    background: linear-gradient(90deg, #FFD700, #FFA500, #FFFACD, #FFD700, #FF8C00);
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: colorShift 5s ease-in-out infinite, subtleShadow 3s ease-in-out infinite;
-    letter-spacing: 1px; /* مسافة بين الحروف لإبراز التأثير */
-}
-
-/* نص ثانوي أقل تأثير */
-.footer-dev {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 8px;
-    background: linear-gradient(90deg, #FFD700, #FFA500, #FFFACD, #FFD700, #FF8C00);
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: colorShift 5s ease-in-out infinite, subtleShadow 3s ease-in-out infinite;
-    letter-spacing: 1px; /* مسافة بين الحروف لإبراز التأثير */
-}
-
-/* حركة تدرج الألوان داخل الحروف */
-@keyframes colorShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* تأثير ظل خفيف متغير لزيادة العمق */
-@keyframes subtleShadow {
-    0%, 100% { text-shadow: 0 0 3px #FFD700, 0 0 8px #FFA500; }
-    50% { text-shadow: 0 0 5px #FFFACD, 0 0 12px #FF8C00; }
-}
-</style>
-
-
-        <style>
-        .footer { background: #000; padding: 40px 20px 30px 20px; text-align: center; border-top: 2px solid #d4af37; color: #fff; position: relative; }
-        .footer p { margin-bottom: 20px; font-size: 1rem; color: #ccc; }
-        .footer-icons { display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; margin-top: 10px; }
-        .footer-icon { display: flex; align-items: center; gap: 8px; color: #d4af37; text-decoration: none; font-weight: 600; padding: 8px 15px; border-radius: 8px; background: rgba(212, 175, 55, 0.1); transition: all 0.3s ease; }
-        .footer-icon:hover { transform: scale(1.1); background: rgba(212, 175, 55, 0.2); color: #fff; box-shadow: 0 0 10px rgba(212, 175, 55, 0.5); }
-        </style>
-
+        <div class="footer">
+            <p class="footer-cnas">&copy; مركز التكوين المهني و التمهين يرحب بكم </p>
+            <p class="footer-dev">تم تطوير هذا الموقع من طرف المتربص عزروق علي بلقندوز</p>
+        </div>
     </div> <!-- نهاية main-content -->
 
     <script src="main.js"></script>
-
-    <!-- ===== JavaScript شاشة الترحيب ===== -->
+    
     <script>
-    function createFirework() {
-        const firework = document.createElement('div');
-        firework.classList.add('spark');
-        const x = Math.random() * window.innerWidth - window.innerWidth/2 + "px";
-        const y = Math.random() * window.innerHeight - window.innerHeight/2 + "px";
-        firework.style.setProperty('--x', x);
-        firework.style.setProperty('--y', y);
-        document.getElementById('fireworks').appendChild(firework);
-        setTimeout(() => firework.remove(), 1000);
-    }
+        // شاشة الترحيب والألعاب النارية
+        function createFirework() {
+            const firework = document.createElement('div');
+            firework.classList.add('spark');
+            const x = Math.random() * window.innerWidth - window.innerWidth/2 + "px";
+            const y = Math.random() * window.innerHeight - window.innerHeight/2 + "px";
+            firework.style.setProperty('--x', x);
+            firework.style.setProperty('--y', y);
+            document.getElementById('fireworks').appendChild(firework);
+            setTimeout(() => firework.remove(), 1000);
+        }
 
-    const interval = setInterval(createFirework, 150);
+        // إنشاء الدوائر المضيئة
+        window.addEventListener('DOMContentLoaded', () => {
+            const h1 = document.querySelector('#intro h1');
+            setTimeout(() => {
+                h1.style.opacity = 1;
+            }, 200);
 
-    setTimeout(() => {
-        clearInterval(interval);
-        document.getElementById('intro').style.display = 'none';
-        document.getElementById('main-content').style.opacity = 1;
-    }, 4000);
+            const intro = document.getElementById('intro');
+            for(let i=0; i<15; i++){
+                const circle = document.createElement('div');
+                circle.classList.add('glow-circle');
+                circle.style.width = `${10+Math.random()*30}px`;
+                circle.style.height = circle.style.width;
+                circle.style.top = `${Math.random()*100}%`;
+                circle.style.left = `${Math.random()*100}%`;
+                circle.style.animationDuration = `${5 + Math.random()*10}s`;
+                intro.appendChild(circle);
+            }
 
-
-// جلب نص الترحيب من لوحة التحكم
-document.addEventListener('DOMContentLoaded', () => {
-    if(welcomeText) {
-        const introH1 = document.querySelector("#intro h1");
-        if(introH1) introH1.textContent = welcomeText;
-    }
-});
-
+            // الألعاب النارية
+            const interval = setInterval(createFirework, 150);
+            
+            setTimeout(() => {
+                clearInterval(interval);
+                document.getElementById('intro').style.display = 'none';
+                document.getElementById('main-content').style.opacity = 1;
+            }, 4000);
+        });
     </script>
-
 </body>
 </html>
