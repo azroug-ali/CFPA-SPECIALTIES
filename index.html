@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مركز التكوين المهني والتمهين بلعجين أحمد - حاسي ماماش</title>
+    <meta name="description" content="يعرض هذا الموقع التخصصات الموجودة في مركز التكوين المهني و التمهين بلعجين أهمد حاسي ماماش">
+    <meta name="google-site-verification" content="2td_DdJtTz2oK-QHR4Wxac5aUkwNRzCsJSb-kORNTLs" />
+    <meta name="keywords" content="CFPA, حاسي ماماش, مركز التكوين المهني, التمهين, التكوين والتمهين">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="Photos/Logo Ali Informatique.png">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://www.fontstatic.com/f=old-antic-decorative">
+
+    <style>
+    /* ===== Intro Screen ===== */
+    #intro {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, #000 0%, #1a1a1a 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 9999;
+        color: #FFD700;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    #intro h1 {
+        font-family: 'Amiri', serif;
+        font-size: 3rem;
+        letter-spacing: 2px;
+        opacity: 0;
+        animation: fadeInText 2s forwards;
+    }
+
+    #intro .fireworks {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    .spark {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background: #FFD700;
+        border-radius: 50%;
+        opacity: 0;
+        animation: explode 1s ease-out forwards;
+    }
+
+    @keyframes fadeInText {
+        0% { opacity: 0; transform: scale(0.5); }
+        50% { opacity: 1; transform: scale(1.1); }
+        100% { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes explode {
+        0% { transform: translate(0,0); opacity: 1; }
+        100% { transform: translate(var(--x), var(--y)) scale(0.5); opacity: 0; }
+    }
+
+    /* المحتوى الرئيسي مخفي مؤقتاً */
+    #main-content {
+        opacity: 0;
+        transition: opacity 1s ease-in;
+    }
+    </style>
+
+</head>
+
+
+<script>
+function toggleMenu() {
+    const menu = document.getElementById("sideMenu");
+    if (menu.style.right === "0px") {
+        menu.style.right = "-320px";
+    } else {
+        menu.style.right = "0px";
+    }
+}
+</script>
+
+
+
+
+<body>
+
+   
+<!-- رابط الخط -->
+    <link rel="stylesheet" type="text/css" href="https://www.fontstatic.com/f=old-antic-decorative" />
+
+    <style>
+        #intro {
+            font-family: "old-antic-decorative", serif;
+        }
+    </style>
+</head>
+<body>
+
+<div id="intro">
+    <h1>دورة فُـيــفُري 2026 ترحب بمتربصيها الشغوفين</h1>
+</div>
+
+
+<style>
+    /* إعدادات شاشة الترحيب */
+    #intro {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle at center, #0a0a0a, #000000);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    #intro h1 {
+        position: relative;
+        font-size: 2.5rem;
+        font-weight: bold;
+        line-height: 1.4;
+        background: linear-gradient(45deg, #FFD700, #FFA500, #FFFACD, #FFD700);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: shine 3s linear infinite, bounce 1.5s ease forwards;
+        text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 20px #FFA500;
+        opacity: 0;
+        z-index: 2;
+    }
+
+    /* ظهور النص تدريجياً */
+    @keyframes bounce {
+        0% { opacity: 0; transform: translateY(20px) scale(0.9); }
+        50% { opacity: 1; transform: translateY(-10px) scale(1.05); }
+        100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    /* لمعان النص */
+    @keyframes shine {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    /* دوائر مضيئة خلف النص */
+    .glow-circle {
+        position: absolute;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(255,215,0,0.8), rgba(255,215,0,0));
+        width: 20px;
+        height: 20px;
+        opacity: 0.6;
+        animation: float 10s linear infinite;
+        pointer-events: none;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0) translateX(0) scale(1); }
+        50% { transform: translateY(-150px) translateX(100px) scale(1.2); }
+        100% { transform: translateY(0) translateX(0) scale(1); }
+    }
+</style>
+
+<script>
+    // ظهور النص تدريجي
+    window.addEventListener('DOMContentLoaded', () => {
+        const h1 = document.querySelector('#intro h1');
+        setTimeout(() => {
+            h1.style.opacity = 1;
+        }, 200);
+
+        // إنشاء دوائر مضيئة عشوائية
+        const intro = document.getElementById('intro');
+        for(let i=0; i<15; i++){
+            const circle = document.createElement('div');
+            circle.classList.add('glow-circle');
+            circle.style.width = `${10+Math.random()*30}px`;
+            circle.style.height = circle.style.width;
+            circle.style.top = `${Math.random()*100}%`;
+            circle.style.left = `${Math.random()*100}%`;
+            circle.style.animationDuration = `${5 + Math.random()*10}s`;
+            intro.appendChild(circle);
+        }
+    });
+</script>
+
+    <!-- تغليف المحتوى الحالي -->
+    <div id="main-content">
+
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <img src="Photos/CFPA HASSI MAMACH.png" alt="" class="logo-container">
+                <h1 class="hero-title">مركز التكوين المهني و التمهين بلعجين أحمد حاسي ماماش</h1>
+                <p class="hero-subtitle">تَخَصُّصَاتٌ مُتَعَدِّدَةٌ. تَدْرِيبٌ عَمَلِيٌّ. شَرَاكَاتٌ وَاسِعَةٌ مَعَ أَرْقَى الشَّرِكَاتِ</p>
+                <p class="hero-subtitle">نَحْنُ نَبْنِي الْمُهَنِيِّينَ.. وَهُمْ يَبْنُونَ الْمُسْتَقْبَلَ</p>
+                <a href="#specialties" class="btn btn-primary">اكتشف تخصصاتنا</a>
+            </div>
+        </section>
+
+        <section class="welcome" id="welcome">
+            <div class="container">
+                <h2>أهلا وسهلا بك</h2>
+                <p>مركز التكوين والتمهين بلعجين أحمد يرحب بك في رحاب العلم والمعرفة والتطبيق العملي. نحن نسعى لتطوير الكفاءات والمهارات المهنية للشباب من خلال برامج تكوينية معتمدة من الدولة، وموجهة نحو احتياجات سوق العمل. فريقنا من المؤطرين المؤهلين والمتخصصين في مختلف المجالات يعمل بكل إخلاص لضمان تجربة تعليمية متميزة تساهم في بناء مستقبل واعد لكل متكون.</p>
+            </div>
+        </section>
+
+        <section class="specialties" id="specialties">
+            <div class="container">
+                <h2>التخصصات المفتوحة</h2>
+                <div class="specialties-grid">
+                    <!-- تخصص 1 -->
+                    <div class="specialty-card" data-id="1">
+                        <div class="card-bg" style="background-color: #ffffff;"></div>
+                        <img src="Photos/تربية الدواجن.jpg" alt="تخصص 1" class="specialty-image">
+                        <div class="specialty-info">
+                            <h3>تربية الدواجن </h3>
+                            <p class="description">المستوى الدراسي المطلوب : الطور الابتدائي فما فوق</p>
+                            <p>نوع الشهادة : شهادة تكوين مهني متخصص CFPS </p>
+                            <p>مدة التكوين : 12 شهرا (عام كامل ) </p>
+                            <button class="btn-details">تفاصيل أكثر</button>
+
+                           <a href="https://www.takwin.dz/inscription/254145/35/27/1/1" class="btn btn-secondary" target="_blank">
+  سجل الان في التخصص
+</a>
+
+
+                        </div>
+                    </div>
+
+                    <!-- تخصص 2 -->
+                    <div class="specialty-card" data-id="2">
+                        <div class="card-bg" style="background-color: #ffffff;"></div>
+                        <img src="Photos/زراعة الخضروات.jpg" alt="تخصص 2" class="specialty-image">
+                        <div class="specialty-info">
+                            <h3>زراعة الخضروات </h3>
+                            <p class="description">المستوى الدراسي المطلوب : الطور الابتدائي فما فوق</p>
+                            <p>نوع الشهادة : شهادة كفاءة مهنية  CAP </p>
+                            <p>مدة التكوين : 12 شهرا (عام كامل ) </p>
+                            <button class="btn-details">تفاصيل أكثر</button>
+                            <a href="https://www.takwin.dz/inscription/254124/35/27/1/1" class="btn btn-secondary" target="_blank">
+  سجل الان في التخصص
+</a>
+
+                        </div>
+                    </div>
+
+                    <!-- تخصص 3 -->
+                    <div class="specialty-card" data-id="3">
+                        <div class="card-bg" style="background-color: #ffffff;"></div>
+                        <img src="Photos/المشتلة.jpg" alt="تخصص 3" class="specialty-image">
+                        <div class="specialty-info">
+                            <h3>المشتلة</h3>
+                             <p class="description">المستوى الدراسي المطلوب : الطور الابتدائي فما فوق</p>
+                            <p>نوع الشهادة : شهادة كفاءة مهنية  CAP </p>
+                            <p>مدة التكوين : 12 شهرا (عام كامل ) </p>
+                            <button class="btn-details">تفاصيل أكثر</button>
+                            <a href="https://www.takwin.dz/inscription/254160/35/27/3/3" class="btn btn-secondary" target="_blank">
+  سجل الان في التخصص
+</a>
+                        </div>
+                    </div>
+
+                    <!-- تخصص 4 -->
+                    <div class="specialty-card" data-id="4">
+                        <div class="card-bg" style="background-color: #ffffff;"></div>
+                        <img src="Photos/التركيب الصحي.jpg" alt="تخصص 4" class="specialty-image">
+                        <div class="specialty-info">
+                            <h3>التركيب الصحي</h3>
+                            <p class="description">المستوى الدراسي المطلوب : نهاية الطور الابتدائي فما فوق</p>
+                            <p>نوع الشهادة : شهادة تكوين مهني متخصص CFPS </p>
+                            <p>مدة التكوين : 12 شهرا (عام كامل ) </p>
+                            <button class="btn-details">تفاصيل أكثر</button>
+                            <a href="https://www.takwin.dz/inscription/254183/35/27/3/3" class="btn btn-secondary" target="_blank">
+  سجل الان في التخصص
+</a>
+                        </div>
+                    </div>
+
+                    <!-- تخصص 5 -->
+                    <div class="specialty-card" data-id="5">
+                        <div class="card-bg" style="background-color: #ffffff;"></div>
+                        <img src="Photos/كهرباء السيارات.jpg" alt="تخصص 5" class="specialty-image">
+                        <div class="specialty-info">
+                            <h3>كهرباء السيارات</h3>
+                           <p class="description">المستوى الدراسي المطلوب : الرابعة متوسط  فما فوق</p>
+                            <p>نوع الشهادة : شهادة كفاءة مهنية  CAP </p>
+                            <p>مدة التكوين : 12 شهرا (عام كامل ) </p>
+                            <button class="btn-details">تفاصيل أكثر</button>
+                            <a href="https://www.takwin.dz/inscription/254191/35/27/3/3" class="btn btn-secondary" target="_blank">
+  سجل الان في التخصص
+</a>
+                        </div>
+                    </div>
+
+                    <!-- تخصص 6 -->
+                    <div class="specialty-card" data-id="6">
+                        <div class="card-bg" style="background-color: #ffffff;"></div>
+                        <img src="Photos/كهرباء صناعية.jpg" alt="تخصص 6" class="specialty-image">
+                        <div class="specialty-info">
+                            <h3>الكهرباء الصناعية</h3>
+                            <p class="description">المستوى الدراسي المطلوب : الرابعة متوسط  فما فوق</p>
+                            <p>نوع الشهادة : شهادة كفاءة مهنية  CAP </p>
+                            <p>مدة التكوين : 12 شهرا (عام كامل ) </p>
+                            <button class="btn-details">تفاصيل أكثر</button>
+                            <a href="https://www.takwin.dz/inscription/254200/35/27/3/3" class="btn btn-secondary" target="_blank">
+  سجل الان في التخصص
+</a>
+                        </div>
+                    </div>
+
+                    <!-- تخصص 7 -->
+                    <div class="specialty-card" data-id="7">
+                        <div class="card-bg" style="background-color: #ffffff;"></div>
+                        <img src="Photos/التبرييد و التكييف.jpg" alt="تخصص 7" class="specialty-image">
+                        <div class="specialty-info">
+                            <h3>تركيب و صيانة أجهزة التبرييد و التكييف</h3>
+                            <p class="description">المستوى الدراسي المطلوب : الرابعة متوسط  فما فوق</p>
+                            <p>نوع الشهادة : شهادة  تحكم مهني CMP </p>
+                            <p>مدة التكوين : 18 شهرا (عام و نصف ) </p>
+                            <button class="btn-details">تفاصيل أكثر</button>
+                            <a href="https://www.takwin.dz/inscription/254209/35/27/3/3" class="btn btn-secondary" target="_blank">
+  سجل الان في التخصص
+</a>
+                        </div>
+                    </div>
+
+                    <!-- تخصص 8 -->
+                    <div class="specialty-card" data-id="8">
+                        <div class="card-bg" style="background-color: #ffffff;"></div>
+                        <img src="Photos/الجزارة.jpg" alt="تخصص 8" class="specialty-image">
+                        <div class="specialty-info">
+                             <h3>الجزارة و منتجات اللحوم </h3>
+                            <p class="description">المستوى الدراسي المطلوب : نهاية الطور الابتدائي  فما فوق</p>
+                            <p>نوع الشهادة : شهادة كفاءة مهنية  CAP </p>
+                            <p>مدة التكوين : 12 شهرا (عام كامل ) </p>
+                            <button class="btn-details">تفاصيل أكثر</button>
+                            <a href="https://www.takwin.dz/inscription/254215/35/27/3/3" class="btn btn-secondary" target="_blank">
+  سجل الان في التخصص
+</a>
+                        </div>
+                    </div>
+
+                    <!-- تخصص 9 -->
+                    <div class="specialty-card" data-id="9">
+                        <div class="card-bg" style="background-color: #ffffff;"></div>
+                        <img src="Photos/العناية ب الح.jpg" alt="تخصص 9" class="specialty-image">
+                        <div class="specialty-info">
+                            <h3>العناية ب الحدائق و المنتزهات </h3>
+                            <p class="description">المستوى الدراسي المطلوب : طور محو الأمية منهي المستوى التعليمي محدود</p>
+                            <p>نوع الشهادة : شهادة تأهيل مهني CQP </p>
+                            <p>مدة التكوين : 3 أشهر </p>
+                            <button class="btn-details">تفاصيل أكثر</button>
+                            <a href="https://www.takwin.dz/inscription/254272/35/27/3/3" class="btn btn-secondary" target="_blank">
+  سجل الان في التخصص
+</a>
+                        </div>
+                    </div>
+
+                    <!-- تخصص 10 -->
+                    <div class="specialty-card" data-id="10">
+                        <div class="card-bg" style="background-color: #ffffff;"></div>
+                        <img src="Photos/إنشاء مشتلة.jpg" alt="تخصص 10" class="specialty-image">
+                        <div class="specialty-info">
+                            <h3>إنشاء مشتلة الأشجار </h3>
+                             <p class="description">المستوى الدراسي المطلوب : طور محو الأمية منهي المستوى التعليمي محدود</p>
+                            <p>نوع الشهادة : شهادة تأهيل مهني CQP </p>
+                            <p>مدة التكوين : 3 أشهر </p>
+                            <button class="btn-details">تفاصيل أكثر</button>
+                            <a href="https://www.takwin.dz/inscription/254234/35/27/3/3" class="btn btn-secondary" target="_blank">
+  سجل الان في التخصص
+</a>
+                        </div>
+                    </div>
+
+                    <!-- تخصص 11 -->
+                    <div class="specialty-card" data-id="11">
+                        <div class="card-bg" style="background-color: #ffffff;"></div>
+                        <img src="Photos/أكساس.jpg" alt="تخصص 11" class="specialty-image">
+                        <div class="specialty-info">
+                            <h3>برنامج أكساس ACCESS </h3>
+                            <p class="description"> المستوى الدراسي المطلوب : ثالثة ثانوي فما فوق </p>
+                            <p>نوع الشهادة : شهادة تأهيل مهني CQP </p>
+                            <p>مدة التكوين : 3 أشهر </p>
+                            <button class="btn-details">تفاصيل أكثر</button>
+                            <a href="https://www.takwin.dz/inscription/254241/35/27/3/3" class="btn btn-secondary" target="_blank">
+  سجل الان في التخصص
+</a>
+                        </div>
+                    </div>
+
+                    <!-- تخصص 12 -->
+                    <div class="specialty-card" data-id="12">
+                        <div class="card-bg" style="background-color: #ffffff;"></div>
+                        <img src="Photos/حلاقة النساء.jpg" alt="تخصص 12" class="specialty-image">
+                        <div class="specialty-info">
+                            <p class="description">المستوى الدراسي المطلوب : الطور المتوسط فما فوق </p>
+                            <p>نوع الشهادة : شهادة تأهيل مهني CQP </p>
+                            <p>مدة التكوين : 3 أشهر </p>
+                            <button class="btn-details">تفاصيل أكثر</button>
+                            <a href="https://www.takwin.dz/inscription/254252/35/27/2/1" class="btn btn-secondary" target="_blank">
+  سجل الان في التخصص
+</a>
+                        </div>
+                    </div>
+
+                        <!-- تخصص 13 -->
+                         <div class="specialty-card" data-id="13">
+                            <div class="card-bg" style="background-color: #ffffff;"></div>
+                            <img src="Photos/إنتاج النباتات.jpg" alt="تخصص 13" class="specialty-image">
+                            <div class="specialty-info">
+                                <h3>إنتاج النباتات</h3>
+                                <p class="description">المستوى الدراسي المطلوب : طور محو الأمية منهي المستوى التعليمي محدود</p>
+                                <p>نوع الشهادة : شهادة تأهيل مهني CQP </p>
+                                <p>مدة التكوين : 3 أشهر </p>
+                            <button class="btn-details">تفاصيل أكثر</button>
+                            <a href="https://www.takwin.dz/inscription/254261/35/27/1/1" class="btn btn-secondary" target="_blank">
+  سجل الان في التخصص
+</a>
+                            </div>
+                     </div>
+        </section>
+
+        <!-- Modal for Specialty Details -->
+        <div id="specialtyModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <div class="modal-body">
+                    <img id="modal-image" src="" alt="" class="modal-image">
+                    <h2 id="modal-title">عنوان التخصص</h2>
+                    <div id="modal-details"></div>
+                </div>
+            </div>
+        </div>
+
+        <section class="why-us" id="why-us">
+            <div class="container">
+                <h2>لماذا تختار مركزنا؟</h2>
+                <div class="features-grid">
+                    <div class="feature">
+                        <div class="feature-icon">📜</div>
+                        <h3>تكوين معتمد</h3>
+                        <p>برامج تكوينية معتمدة رسميا من وزارة التكوين والتعليم الفني.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">👨‍🏫</div>
+                        <h3>مؤطرون مؤهلون</h3>
+                        <p>فريق متخصص من المؤطرين ذوي الخبرة العملية والعلمية.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🏭</div>
+                        <h3>ورشات مجهزة</h3>
+                        <p>ورشات عمل مجهزة بأحدث الادوات والتقنيات الحديثة.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🎓</div>
+                        <h3>شهادات رسمية</h3>
+                        <p>شهادات معترف بها وطنيا توفر فرصا حقيقية في سوق العمل.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">💼</div>
+                        <h3>التوظيف والتمهين</h3>
+                        <p>فرص للعمل والتمهين مع مؤسسات اقتصادية معروفة.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🚀</div>
+                        <h3>مستقبل مضمون</h3>
+                        <p>بناء مسار مهني ناجح يساهم في تطورك الشخصي والمهني.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery" id="gallery">
+    <div class="container">
+        <h2>معرض الصور</h2>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item">
+                <img src="Photos/Electrixété auto.jpg" alt="" class="gallery-image">
+            </div>
+
+            <div class="gallery-item">
+                <img src="Photos/Electrixété endustriale.jpg" alt="" class="gallery-image">
+            </div>
+
+            <div class="gallery-item">
+                <img src="Photos/Plomprie.jpg" alt="" class="gallery-image">
+            </div>
+
+            <div class="gallery-item">
+                <img src="Photos/Bouchré.jpg" alt="" class="gallery-image">
+            </div>
+
+            <div class="gallery-item">
+                <img src="Photos/Froua.jpg" alt="" class="gallery-image">
+            </div>
+
+            <div class="gallery-item">
+                <img src="Photos/flaha.jpg" alt="" class="gallery-image">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+        <section class="registration" id="registration">
+            <div class="container">
+                <h2>التسجيل والقبول</h2>
+                <div class="registration-content">
+                    <p>يتم التسجيل حصريا عبر الموقع الرسمي للجمهورية الجزائرية الديمقراطية الشعبية. اضغط على الزر ادناه للانتقال إلى بوابة التسجيل الرسمية.</p>
+                    <a href="https://www.takwin.dz" target="_blank" class="btn btn-registration">الدخول إلى بوابة التسجيل الرسمية</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="footer-icons"  id="footer-icons">
+
+    <a href="tel:+213045 43 07 69" class="footer-icon" title="إتصل بنا ">
+        📞 69 07 43 045
+    </a>
+
+    <a href="fax:+213045 43 07 68" class="footer-icon" title="الفاكس">
+        📠 68 07 43 045
+    </a>
+
+    <!-- الإيميل -->
+    <a href="mailto:cfpahassimameche27@gmail.com" 
+       class="footer-icon" title="إرسال بريد إلكتروني">
+        📧 تواصل معنا عبر البريد الالكتروني 
+    </a>
+
+    <a href="https://www.facebook.com/alsfht.alrsmyt.lmrkz.altkwyn.almhny.w.al" 
+       target="_blank" class="footer-icon" title="تواصل معنا">
+        🌐 صفحتنا عبر الفايسبوك
+    </a>
+
+</div>
+
+<div class="footer">
+    <p class="footer-cnas">&copy; مركز التكوين المهني و التمهين يرحب بكم </p>
+    <p class="footer-dev">تم تطوير هذا الموقع من طرف المتربص عزروق علي بلقندوز</p>
+</div>
+
+<style>
+/* ===================== الفوتر ===================== */
+.footer {
+    text-align: center;
+    padding: 20px 10px;
+    background-color: #111; /* خلفية داكنة لتمييز الألوان */
+    color: white;
+    font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    z-index: 10;
+}
+
+/* نص رئيسي ذهبي متدرج وحركة ألوان */
+.footer-cnas {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    background: linear-gradient(90deg, #FFD700, #FFA500, #FFFACD, #FFD700, #FF8C00);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: colorShift 5s ease-in-out infinite, subtleShadow 3s ease-in-out infinite;
+    letter-spacing: 1px; /* مسافة بين الحروف لإبراز التأثير */
+}
+
+/* نص ثانوي أقل تأثير */
+.footer-dev {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    background: linear-gradient(90deg, #FFD700, #FFA500, #FFFACD, #FFD700, #FF8C00);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: colorShift 5s ease-in-out infinite, subtleShadow 3s ease-in-out infinite;
+    letter-spacing: 1px; /* مسافة بين الحروف لإبراز التأثير */
+}
+
+/* حركة تدرج الألوان داخل الحروف */
+@keyframes colorShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* تأثير ظل خفيف متغير لزيادة العمق */
+@keyframes subtleShadow {
+    0%, 100% { text-shadow: 0 0 3px #FFD700, 0 0 8px #FFA500; }
+    50% { text-shadow: 0 0 5px #FFFACD, 0 0 12px #FF8C00; }
+}
+</style>
+
+
+        <style>
+        .footer { background: #000; padding: 40px 20px 30px 20px; text-align: center; border-top: 2px solid #d4af37; color: #fff; position: relative; }
+        .footer p { margin-bottom: 20px; font-size: 1rem; color: #ccc; }
+        .footer-icons { display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; margin-top: 10px; }
+        .footer-icon { display: flex; align-items: center; gap: 8px; color: #d4af37; text-decoration: none; font-weight: 600; padding: 8px 15px; border-radius: 8px; background: rgba(212, 175, 55, 0.1); transition: all 0.3s ease; }
+        .footer-icon:hover { transform: scale(1.1); background: rgba(212, 175, 55, 0.2); color: #fff; box-shadow: 0 0 10px rgba(212, 175, 55, 0.5); }
+        </style>
+
+    </div> <!-- نهاية main-content -->
+
+    <script src="main.js"></script>
+
+    <!-- ===== JavaScript شاشة الترحيب ===== -->
+    <script>
+    function createFirework() {
+        const firework = document.createElement('div');
+        firework.classList.add('spark');
+        const x = Math.random() * window.innerWidth - window.innerWidth/2 + "px";
+        const y = Math.random() * window.innerHeight - window.innerHeight/2 + "px";
+        firework.style.setProperty('--x', x);
+        firework.style.setProperty('--y', y);
+        document.getElementById('fireworks').appendChild(firework);
+        setTimeout(() => firework.remove(), 1000);
+    }
+
+    const interval = setInterval(createFirework, 150);
+
+    setTimeout(() => {
+        clearInterval(interval);
+        document.getElementById('intro').style.display = 'none';
+        document.getElementById('main-content').style.opacity = 1;
+    }, 4000);
+
+
+// جلب نص الترحيب من لوحة التحكم
+document.addEventListener('DOMContentLoaded', () => {
+    if(welcomeText) {
+        const introH1 = document.querySelector("#intro h1");
+        if(introH1) introH1.textContent = welcomeText;
+    }
+});
+
+    </script>
+
+<!-- ===== HEADER ===== -->
+<header class="top-header">
+    <div class="menu-icon" onclick="toggleMenu()">
+        &#9776;
+    </div>
+</header>
+
+<!-- ===== SIDE MESSAGE / MENU ===== -->
+<div id="sideMenu" class="side-menu">
+    <span class="close-btn" onclick="toggleMenu()">×</span>
+
+  
+
+
+
+    <h2>تَرْفُ أجنحة الترحيب لاستقبالكم</h2>
+      <a href="#footer-icons" class="menu-link" onclick="toggleMenu()">
+    📞 تواصل معنا
+</a>
+        <a href="https://maps.app.goo.gl/6rpMipnNdxkZ4Zc29" 
+   target="_blank" class="menu-link">
+    🗺️ موقعنا
+</a>
+
+
+<!-- زر فتح الرسالة المنبثقة -->
+<a href="javascript:void(0);" class="menu-link" onclick="togglePopup1()">
+    الوثائق اللازمة للتسجيل 
+</a>
+
+<!-- الرسالة الأولى -->
+<div id="popupMessage1" class="popup-message">
+    <h2 class="popup-title">الوثائق اللازمة للتسجيل</h2>
+    <p id="popupText1">
+        • بطاقة التعريف الوطنية ( البطاقة البيومترية )
+        <br>• شهادة الميلاد
+        <br>• يجب عليك أن يكون لديك حساب Gmail
+        <br>• رقم الهاتف 
+        <p>يجب عليك إستخراج عقد التمهين أذا إخترت تخصص نمط التمهين </p>
+    </p>
+    <h2 class="popup-title2">يجب على كل شخص قد سجل في منصة takwin.dz أن يحتفظ على إسم المستخدم و كلمة المرور لمتابعة حالة حسابه  </h2>
+
+    <div style="height: 20px;"></div> <!-- مسافة قبل الزر -->
+
+    <button class="popup-button" onclick="openSecondPopup()">ماذا أفعل بعد التسجيل الاولي</button>
+
+    <span class="close-popup" onclick="togglePopup1()">×</span>
+</div>
+
+<!-- الرسالة الثانية -->
+<div id="popupMessage2" class="popup-message">
+    <h2 class="popup-title">الذي سوف تفعله بعد التسجيل هوا : </h2>
+    <p id="popupText2">
+        <br>• الدخول إلى حسابك على منصة takwin.dz
+        <br>• تحميل الملفات المطلوبة بعناية شديدة لقبول ملفكم
+        <br>•بطاقة التعريف الوطنية (البطاقة البيومترية )
+        <br>• صورة شمسية ذات خلفية بيضاء
+        <br>• شهادة مدرسية (تحديد تاريخ الخروج)
+        <br>• شهادة طبية (عامة و صدرية)
+        <br>• عقد التمهين ممضئ من طرف المستخدم (في حالة إختيار نمط التمهين)
+        <br>• التحقق من ملئ كل الحقول بعناية 
+        <br>• بعد التحقق من كل شيئ يرجى إستخراج شهادة تأكيد التسجيل و الاحتفاظ بها 
+        <br>• قم بمتابعة حسابك بإستمرار على المنصة حتى يتأكد التسجيل
+        <h2 class="popup-title3">يرجى من كل شخص قام ب التسجيل على منصة takwin.dz أن يقوم ب تسجيل الدخول مرتين أو أكثر لمراقبة تسجيله </h2>
+    </p>
+    <span class="close-popup" onclick="togglePopup2()">×</span>
+</div>
+
+
+
+<!-- زر أسئلة شائعة عائم -->
+<button id="faqFloatingBtn">أسئلة شائعة</button>
+
+<!-- نافذة الأسئلة الشائعة -->
+ <div id="faqPopup" class="popup-message">
+    <span class="close-popup" id="faqCloseBtn">×</span>
+    <h2 class="popup-title">الأسئلة الشائعة</h2>
+
+    <div class="faq-list">
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span> ماهوا نمط التمهين ؟</span>
+                <span class="faq-arrow">▼</span>
+            </div>
+            <div class="faq-answer">
+                نمط التمهين هوا عندما يدرس المتربص يوم أو أكثر في المؤسسة و باقي أيام أسبوع يقضيها في العمل 
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>هل يمكننا إختيار تخصص يتطلب مستوى دراسي أكثر من المستوى الدراسي الخاص بي ؟</span>
+                <span class="faq-arrow">▼</span>
+            </div>
+            <div class="faq-answer">
+                لا يمكنك إختيار تخصص ليس لديك المستوى التعليمي يناسبه أو أكثر منه
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>هل يجب الالتزام بالحضور اليومي للمؤسسة و في العمل ؟</span>
+                <span class="faq-arrow">▼</span>
+            </div>
+            <div class="faq-answer">
+                نعم يتوجب عليك إتباع إستعمال الزمن الخاص بك لتجبن أي مجالس تأديبية 
+            </div>
+        </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+                <span>هل يمكن الانتقال من تخصص إلى أخر عند التسجيل و قبول التسجيل ؟</span>
+                <span class="faq-arrow">▼</span>
+            </div>
+            <div class="faq-answer">
+                لا يمكنك ذالك إلى في حالات فتح التسجيلات مرة أخرى 
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>هل يمكن الخروج خارج المؤسسة في وقت الراحة(10) ؟</span>
+                <span class="faq-arrow">▼</span>
+            </div>
+            <div class="faq-answer">
+                لا يمكنك ذالك إلى في الحالات الاستثنائية 
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<button id="faqFloatingBtn2">📜 قوانين المؤسسة</button>
+
+<!-- نافذة الرسالة الأساسية -->
+<div id="faqPopup2" class="popup-message2">
+    <div class="message-container">
+        <div class="message-content">
+            <h2>📬 رسالة خاصة</h2>
+            <p>انقر لفتح الرسالة ومعرفة قوانين المؤسسة</p>
+            <div class="open-message-btn">افتح الرسالة</div>
+        </div>
+    </div>
+</div>
+
+<!-- الورقة المنبثقة -->
+<div id="paperPopup" class="paper-popup">
+    <div class="paper-content">
+        <span class="close-paper" id="closePaperBtn">×</span>
+        <div class="paper-header">
+            <div class="letter-icon">✉️</div>
+            <h2>قوانين المؤسسة الرسمية</h2>
+            <div class="paper-date">التاريخ: 2025/12/22</div>
+        </div>
+        
+        <div class="paper-body">
+            <div class="paper-text">
+                <p class="paper-intro">السادة الأعزاء،<br>نرفق لكم قوانين المؤسسة الرسمية للالتزام بها:</p>
+                
+                <ul class="paper-rules">
+                    <li>
+                        <span class="rule-number">1</span>
+                        <span class="rule-text">الالتزام بمواقيت الحضور و الخروج المحددة</span>
+                    </li>
+                    <li>
+                        <span class="rule-number">2</span>
+                        <span class="rule-text">احترام كامل الطاقم التربوي </span>
+                    </li>
+                    <li>
+                        <span class="rule-number">3</span>
+                        <span class="rule-text">منع استعمال الهاتف داخل الأقسام</span>
+                    </li>
+                    <li>
+                        <span class="rule-number">4</span>
+                        <span class="rule-text">ممنوع منعا باتا التدخين داخل محيط المؤسسة</span>
+                    </li>
+                    <li>
+                        <span class="rule-number">5</span>
+                        <span class="rule-text">ممنوع الدخول للمؤسة في حالة الغياب من دون ولي الامر و سبب الغياب </span>
+                    </li>
+                </ul>
+                
+                <div class="paper-footer">
+                    <div class="signature">
+                        <div class="signature-container">
+                         <div class="signature-label">رئيس المصلحة :</div>
+                         <div class="signature-line">سعدون عبد القادر</div>
+                    </div>
+                    <div class="stamp">
+                        <div class="stamp-circle">بلعجين أحمد</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const rulesBtn = document.getElementById("faqFloatingBtn2");
+    const messagePopup = document.getElementById("faqPopup2");
+    const paperPopup = document.getElementById("paperPopup");
+    const closePaperBtn = document.getElementById("closePaperBtn");
+    const openMessageBtn = document.querySelector('.open-message-btn');
+
+    // فتح الرسالة عند الضغط على الزر الرئيسي
+    rulesBtn.addEventListener("click", () => {
+        messagePopup.style.display = "flex";
+    });
+
+    // فتح الورقة عند الضغط على "افتح الرسالة"
+    openMessageBtn.addEventListener("click", () => {
+        messagePopup.style.display = "none";
+        setTimeout(() => {
+            paperPopup.style.display = "flex";
+            setTimeout(() => {
+                document.querySelector('.paper-content').classList.add('paper-open');
+            }, 100);
+        }, 300);
+    });
+
+    // إغلاق الورقة
+    closePaperBtn.addEventListener("click", () => {
+        document.querySelector('.paper-content').classList.remove('paper-open');
+        setTimeout(() => {
+            paperPopup.style.display = "none";
+        }, 500);
+    });
+
+    // إغلاق النوافذ عند النقر على الخلفية
+    messagePopup.addEventListener("click", (e) => {
+        if (e.target === messagePopup) {
+            messagePopup.style.display = "none";
+        }
+    });
+
+    paperPopup.addEventListener("click", (e) => {
+        if (e.target === paperPopup) {
+            document.querySelector('.paper-content').classList.remove('paper-open');
+            setTimeout(() => {
+                paperPopup.style.display = "none";
+            }, 500);
+        }
+    });
+});
+</script>
+
+
+<script src="faq.js"></script>
+
+
+<!-- نهاية الصفحة -->
+<script src="main.js"></script>
+</body>
+</html>
